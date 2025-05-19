@@ -31,6 +31,11 @@ end
 vim.opt.rtp:prepend(lazypath)
 require('lazy').setup('lazy_plugins', {})
 
+vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
+  pattern = "*.clfn",
+  command = "set filetype=clfn"
+})
+
 require("keymaps")
 require("config_plugins.telescope")
 require("config_plugins.treesitter")
@@ -46,3 +51,4 @@ vim.api.nvim_create_autocmd('TextYankPost', {
 })
 
 require("lsp")
+vim.cmd.colorscheme 'cyberdream'
