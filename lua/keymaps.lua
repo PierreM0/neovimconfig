@@ -1,0 +1,8 @@
+vim.keymap.set('n', '<Esc>', '<cmd>nohlsearch<CR>')
+vim.keymap.set('n', '<leader>q', vim.diagnostic.setloclist, { desc = 'Open diagnostic [Q]uickfix list' })
+-- vim.keymap.set('n', '<leader>cf', require('conform').format, { desc = '[F]ormat buffer' })
+vim.keymap.set('n', 'gca', '<cmd>lua vim.lsp.buf.code_action()<CR>', { desc = '[C]ode [A]ctions' })
+vim.keymap.set('n', 'gD', '<cmd>lua vim.lsp.buf.definition()<CR>', { desc = '[C]ode [A]ctions' })
+vim.keymap.set('n', '<leader>ff', '<cmd>Telescope fd<CR>', { desc = '[F]ind [F]iles' })
+vim.keymap.set('n', '<leader>fg', '<cmd>Telescope grep_string<CR>', { desc = '[F]ind [G]rep' })
+vim.keymap.set('n', '<leader><leader>', '<cmd>Telescope buffers<CR>', { desc = '[F]ind [B]uffers' })
